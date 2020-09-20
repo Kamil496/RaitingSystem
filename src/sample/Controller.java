@@ -33,67 +33,28 @@ public class Controller {
         Integer tempValue = calculateValue() % 5;
         Integer raiting = tempValue + 1;
         lblRaiting.setText(raiting.toString());
-
-        switch (raiting) {
-            case 15: {
-                lblValue.setText("Sehr schlecht");
-            }
-            case 14: {
-                lblValue.setText("Sehr schlecht");
-            }
-            case 13: {
-                lblValue.setText("Sehr schlecht");
-            }
-            case 12: {
-                lblValue.setText("Sehr schlecht");
-            }
-            case 11: {
-                lblValue.setText("Sehr schlecht");
-            }
-            case 10: {
-                lblValue.setText("Sehr schlecht");
-            }
-            case 9: {
-                lblValue.setText("Okay");
-            }
-            case 8: {
-                lblValue.setText("Okay");
-            }
-            case 7: {
-                lblValue.setText("Okay");
-            }
-            case 6: {
-                lblValue.setText("Okay");
-            }
-            case 5: {
-                lblValue.setText("Sehr gut");
-            }
-            case 4: {
-                lblValue.setText("Sehr gut");
-            }
-            case 3: {
-                lblValue.setText("Sehr gut");
-            }
-            case 2: {
-                lblValue.setText("Sehr gut");
-            }
-            case 1: {
-                lblValue.setText("Sehr gut");
-            }
-        }
+        choise(raiting);
 
         if (raiting >= 15) {
-            raiting = 15;
-            lblValue.setText("Sehr Schlecht");
+            lblRaiting.setText("15");
         }
         if (raiting <= 1) {
             raiting = 1;
-            lblRaiting.setText("1");
-            lblValue.setText("Sehr gut");
         }
 
         return raiting;
 
+    }
+
+    public void choise(Integer raiting) {
+
+        if (raiting >= 5 && raiting <= 10) {
+            lblValue.setText("Okay");
+        } else if (raiting >= 1 && raiting <= 5) {
+            lblValue.setText("sehr gut");
+        } else if (raiting >= 10 && raiting <= 15) {
+            lblValue.setText("schlecht");
+        }
     }
 
     /*
