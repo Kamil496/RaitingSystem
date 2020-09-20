@@ -14,9 +14,9 @@ public class Controller {
     private TextField txtfieldEinnahmen,
             txtFieldAusgaben;
 
-/*
-Hier werden aus den eingegebenen Parametern ein Bilanzwert berechnet
- */
+    /*
+    Hier werden aus den eingegebenen Parametern ein Bilanzwert berechnet
+     */
     private Integer berechnungBilanzwert() {
         String einnahmen = txtfieldEinnahmen.getText();
         String ausgaben = txtFieldAusgaben.getText();
@@ -87,6 +87,7 @@ Hier werden aus den eingegebenen Parametern ein Bilanzwert berechnet
         }
         if (raiting <= 1) {
             raiting = 1;
+            lblRaiting.setText("1");
             lblWertung.setText("Sehr gut");
         }
 
