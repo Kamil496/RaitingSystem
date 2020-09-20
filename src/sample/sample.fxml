@@ -7,12 +7,12 @@
    <children>
       <Label fx:id="txtLable" text="Hier Einnahmen eingeben:">
        </Label>
-      <TextField fx:id="txtfieldEinnahmen" />
+      <TextField fx:id="txtIncome" />
       <Label text="Hier Ausgaben eingeben: " />
-      <TextField fx:id="txtFieldAusgaben" />
+      <TextField fx:id="txtEditions" />
       <Label text="Raiting:" />
       <Label fx:id="lblRaiting" />
-      <Label fx:id="lblWertung" />
+      <Label fx:id="lblValue" />
       <Button mnemonicParsing="false" onAction="#calculate" text="Berechnen" />
    </children>
 </VBox>
