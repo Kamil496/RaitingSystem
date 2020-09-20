@@ -10,8 +10,8 @@
       <TextField fx:id="txtIncome" />
       <Label text="Hier Ausgaben eingeben: " />
       <TextField fx:id="txtEditions" />
-      <Label text="Raiting:" />
-      <Label fx:id="lblRaiting" />
+      <Label text="Rating:" />
+      <Label fx:id="lblrating" />
       <Label fx:id="lblValue" />
       <Button mnemonicParsing="false" onAction="#calculate" text="Berechnen" />
    </children>
