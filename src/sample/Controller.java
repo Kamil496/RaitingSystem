@@ -25,9 +25,20 @@ public class Controller {
         return überschussORFehlbetrag;
     }
 
-    private void bewertung() {
+    private void bewertung(){
 
-        switch (raiting()) {
+
+    }
+
+    /*
+    Hier wird das Raiting lvl berechnet und die jeweilige Bweretung festlegelgt
+     */
+    private Integer raiting() {
+        Integer zwichenwert = berechnungBilanzwert() % 5;
+        Integer raiting = zwichenwert + 1;
+        lblRaiting.setText(raiting.toString());
+
+        switch (raiting) {
             case 15: {
                 lblWertung.setText("Sehr schlecht");
             }
@@ -75,17 +86,6 @@ public class Controller {
             }
         }
 
-    }
-
-    /*
-    Hier wird das Raiting lvl berechnet und die jeweilige Bweretung festlegelgt
-     */
-    private Integer raiting() {
-        Integer zwichenwert = berechnungBilanzwert() % 5;
-        Integer raiting = zwichenwert + 1;
-        lblRaiting.setText(raiting.toString());
-
-        bewertung();
         if (raiting >= 15) {
             raiting = 15;
             lblWertung.setText("Sehr Schlecht");
