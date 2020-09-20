@@ -96,18 +96,20 @@ public class Controller {
 
     }
 
-    /*
-    Button zum auslösen der Berechnung und Dialog falls die Textfelder leer sind
-     */
-    public void calculate() {
+    private void checkIfEmpty(){
         if (txtFieldAusgaben.getText().isEmpty() || txtfieldEinnahmen.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Bitte einen Wert eingeben");
             alert.showAndWait();
         }
+    }
 
+    /*
+    Button zum auslösen der Berechnung und Dialog falls die Textfelder leer sind
+     */
+    public void calculate() {
+        checkIfEmpty();
         raiting();
-
     }
 
 
