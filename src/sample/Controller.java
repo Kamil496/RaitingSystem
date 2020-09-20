@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 public class Controller {
     @FXML
     private Label txtLable,
-            lblRaiting,
+            lblrating,
             lblValue;
     @FXML
     private TextField txtIncome,
@@ -27,32 +27,32 @@ public class Controller {
 
 
     /*
-    Here the Raiting lvl is calculated and the respective value is determined
+    Here the rating lvl is calculated and the respective value is determined
      */
-    private Integer raiting() {
+    private Integer rating() {
         Integer tempValue = calculateValue() % 5;
-        Integer raiting = tempValue + 1;
-        lblRaiting.setText(raiting.toString());
-        choise(raiting);
+        Integer rating = tempValue + 1;
+        lblrating.setText(rating.toString());
+        choise(rating);
 
-        if (raiting >= 15) {
-            lblRaiting.setText("15");
+        if (rating >= 15) {
+            lblrating.setText("15");
         }
-        if (raiting <= 1) {
-            raiting = 1;
+        if (rating <= 1) {
+            rating = 1;
         }
 
-        return raiting;
+        return rating;
 
     }
 
-    public void choise(Integer raiting) {
+    public void choise(Integer rating) {
 
-        if (raiting >= 5 && raiting <= 10) {
+        if (rating >= 5 && rating <= 10) {
             lblValue.setText("Okay");
-        } else if (raiting >= 1 && raiting <= 5) {
+        } else if (rating >= 1 && rating <= 5) {
             lblValue.setText("sehr gut");
-        } else if (raiting >= 10 && raiting <= 15) {
+        } else if (rating >= 10 && rating <= 15) {
             lblValue.setText("schlecht");
         }
     }
@@ -74,6 +74,6 @@ public class Controller {
     public void calculate() {
 
         checkIfEmpty();
-        raiting();
+        rating();
     }
 }
