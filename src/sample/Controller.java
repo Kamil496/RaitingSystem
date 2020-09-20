@@ -15,7 +15,7 @@ public class Controller {
             txtEditions;
 
     /*
-    Hier werden aus den eingegebenen Parametern ein Bilanzwert berechnet
+    Here a balance sheet value is calculated from the entered parameters
      */
     private Integer calculateValue() {
         String income = txtIncome.getText();
@@ -27,7 +27,7 @@ public class Controller {
 
 
     /*
-    Hier wird das Raiting lvl berechnet und die jeweilige Bweretung festlegelgt
+    Here the Raiting lvl is calculated and the respective value is determined
      */
     private Integer raiting() {
         Integer tempValue = calculateValue() % 5;
@@ -97,7 +97,7 @@ public class Controller {
     }
 
     /*
-    Prüfen ob Textfelder leer sind
+   Check if text fields are empty
      */
     private void checkIfEmpty() {
         if (txtEditions.getText().isEmpty() || txtIncome.getText().isEmpty()) {
@@ -108,7 +108,7 @@ public class Controller {
     }
 
     /*
-    Button zum auslösen der Berechnung
+    Button to trigger the calculation
      */
     public void calculate() {
 
