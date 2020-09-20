@@ -25,10 +25,6 @@ public class Controller {
         return überschussORFehlbetrag;
     }
 
-    private void bewertung(){
-
-
-    }
 
     /*
     Hier wird das Raiting lvl berechnet und die jeweilige Bweretung festlegelgt
