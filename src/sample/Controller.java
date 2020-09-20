@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -94,9 +95,14 @@ Hier werden aus den eingegebenen Parametern ein Bilanzwert berechnet
     }
 
     /*
-    Button zum auslösen der Berechnung
+    Button zum auslösen der Berechnung und Dialog falls die Textfelder leer sind
      */
     public void calculate() {
+        if (txtFieldAusgaben.getText().isEmpty() || txtfieldEinnahmen.getText().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Bitte einen Wert eingeben");
+            alert.showAndWait();
+        }
 
         raiting();
 
