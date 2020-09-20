@@ -96,6 +96,9 @@ public class Controller {
 
     }
 
+    /*
+    Prüfen ob Textfelder leer sind
+     */
     private void checkIfEmpty(){
         if (txtFieldAusgaben.getText().isEmpty() || txtfieldEinnahmen.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -105,7 +108,7 @@ public class Controller {
     }
 
     /*
-    Button zum auslösen der Berechnung und Dialog falls die Textfelder leer sind
+    Button zum auslösen der Berechnung
      */
     public void calculate() {
         checkIfEmpty();
